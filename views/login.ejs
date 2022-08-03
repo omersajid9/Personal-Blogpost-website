@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <h1>Login Page</h1>
+    <form action="/api/auth/login" method="POST" name="form">
+
+
+      <% if (status == 400 || status == 401) { %>
+      <div class="error" style="background-color: red;"> <%= data %></div>
+      <% } %>
+      <br />
+      <label for="username">Username</label><br />
+      <input type="text" name="username" required /><br />
+      <label for="password">Password</label><br />
+      <input type="password" name="password" required /><br />
+      <input type="submit" value="login" id="login"/><br />
+    </form>
+    <a href="/register">Don't have an accout? Register</a>
+
+
+  </body>
+</html>

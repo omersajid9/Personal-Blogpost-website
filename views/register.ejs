@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+  </head>
+
+  <body>
+    <h1>Register Page</h1>
+    <form action="/api/auth/register" method="post" name="form">
+
+
+      <% if (status == 401) { %>
+        <div class="error" style="background-color: red;"> <%= data %> </div>
+        <% }%>
+
+        <br />
+
+      <label for="username">Username</label><br />
+      <input type="text" name="username" required /><br />
+      <label for="password">Password</label><br />
+      <input type="password" name="password" required /><br />
+      <input type="submit" value="register" /><br />
+    </form>
+    <a href="/login">Already registered? Login</a>
+
+    <script>
+    // alert('Here!!!!!!!');
+    // console.log(res);
+    // if (res.status == '400' || res.status == '401') {
+    //   console.log("here")
+    //   alert("${dataUpdate.message}, ${dataUpdate.error ? dataUpdate.error : ''}")
+    //   }
+    </script>
+
+
+  </body>
+</html>

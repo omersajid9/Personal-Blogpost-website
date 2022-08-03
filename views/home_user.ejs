@@ -1,0 +1,16 @@
+<%- include("partials/header"); -%>
+
+<h1> Hello </h1>
+<p> <%= content%> </p>
+
+
+<% postArray.forEach((element)=>{ %>
+  <h1> <%=element.Title %></h1>
+  <p> <%=element.Text.substring(0,50) %> </p>
+  <a href= <%-"/posts/".concat(element.Title)%> >Read Me </a>
+<% }) %>
+
+
+
+
+<%- include("partials/footer"); -%>
